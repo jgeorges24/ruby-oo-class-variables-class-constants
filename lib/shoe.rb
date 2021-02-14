@@ -1,9 +1,11 @@
 class Shoe
-  attr_accessor :color, :size, :material, :condition
-  attr_reader :brand
+  attr_accessor :color, :size, :material, :condition, :brand
+  attr_reader 
 
-  def initialize(brand)
-    @brand = brand
+  BRANDS = []
+
+  def initialize(brands)
+    @brands = brands
   end
 
   def cobble
@@ -11,4 +13,10 @@ class Shoe
     puts "Your shoe is as good as new!"
   end
 
-end
+
+  # create the writer for genre and add the logic for the class constant
+  def brands=(brands)
+    @brands = brands
+    BRANDS << brands 
+  end
+end 
